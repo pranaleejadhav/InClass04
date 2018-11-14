@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ehU-MT-VM3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Password Setup View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PasswordSetupViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Passwords" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXy-zj-WWh">
+                                <rect key="frame" x="20" y="74" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1hS-9c-XtQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IYW-b2-d1B">
+                                <rect key="frame" x="0.0" y="134" width="375" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="aVI-m5-mba"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellItem" id="LBa-7u-39J">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LBa-7u-39J" id="zm1-Iz-a81">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Qfq-Gf-den"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yaw-sP-HKn"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV6-M7-Ovf">
+                                <rect key="frame" x="5" y="444" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hot-ed-0Dh">
+                                <rect key="frame" x="10" y="632" width="355" height="30"/>
+                                <state key="normal" title="Create Passwords"/>
+                                <connections>
+                                    <action selector="create_pwd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="02F-9d-02X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IYW-b2-d1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DfZ-Wb-K6Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZXy-zj-WWh" secondAttribute="trailing" constant="20" id="FXY-qK-3Wc"/>
+                            <constraint firstItem="kV6-M7-Ovf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="GYa-YU-U9z"/>
+                            <constraint firstItem="hot-ed-0Dh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UWd-mT-tuT"/>
+                            <constraint firstItem="ZXy-zj-WWh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VML-6P-xVH"/>
+                            <constraint firstItem="IYW-b2-d1B" firstAttribute="top" secondItem="ZXy-zj-WWh" secondAttribute="bottom" constant="20" id="WDc-kJ-h0b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYW-b2-d1B" secondAttribute="trailing" id="Zx3-66-4E1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kV6-M7-Ovf" secondAttribute="trailing" constant="5" id="cOB-oG-XIb"/>
+                            <constraint firstItem="kV6-M7-Ovf" firstAttribute="top" secondItem="IYW-b2-d1B" secondAttribute="bottom" constant="30" id="cha-Y9-oTp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hot-ed-0Dh" secondAttribute="trailing" constant="10" id="ekT-kZ-pWo"/>
+                            <constraint firstItem="ZXy-zj-WWh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="hUa-BX-Syw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hot-ed-0Dh" secondAttribute="bottom" constant="5" id="zZH-6d-57b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ynb-8Q-WV9"/>
+                    <connections>
+                        <outlet property="password_cnt" destination="ZXy-zj-WWh" id="LCl-iV-oxa"/>
+                        <outlet property="selected_pwd" destination="kV6-M7-Ovf" id="YNF-gt-lbs"/>
+                        <outlet property="tableview" destination="IYW-b2-d1B" id="vKN-d6-Qq7"/>
+                        <segue destination="Qg6-9N-B8I" kind="show" identifier="createpasswords" id="yRK-iQ-ZKQ"/>
+                        <segue destination="aOU-oF-WCa" kind="unwind" unwindAction="unwindToVCWithSegue:" id="nOA-aM-6fS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="-665"/>
+        </scene>
+        <!--Passwords List View Controller-->
+        <scene sceneID="MA3-Ds-OT1">
+            <objects>
+                <viewController id="Qg6-9N-B8I" customClass="PasswordsListViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hrW-VB-eOx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sf4-dy-byr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellItem" id="pz6-zo-PPf">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pz6-zo-PPf" id="NWh-sO-e61">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aOU-oF-WCa" kind="unwind" identifier="goback" unwindAction="unwindToVCWithSegue:" id="o1A-qR-u8p"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qg6-9N-B8I" id="BLa-lk-PaM"/>
+                                    <outlet property="delegate" destination="Qg6-9N-B8I" id="aaQ-3f-3x3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AP6-Lz-LOd" firstAttribute="trailing" secondItem="sf4-dy-byr" secondAttribute="trailing" id="7HI-sQ-TNo"/>
+                            <constraint firstItem="sf4-dy-byr" firstAttribute="top" secondItem="AP6-Lz-LOd" secondAttribute="top" id="bFr-FB-1ch"/>
+                            <constraint firstItem="sf4-dy-byr" firstAttribute="leading" secondItem="AP6-Lz-LOd" secondAttribute="leading" id="y4Y-Nf-0fe"/>
+                            <constraint firstItem="AP6-Lz-LOd" firstAttribute="bottom" secondItem="sf4-dy-byr" secondAttribute="bottom" id="yXg-ta-NpN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AP6-Lz-LOd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="sf4-dy-byr" id="FmB-WR-2C6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIs-x3-UNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aOU-oF-WCa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1645" y="-667"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j5F-HH-bYY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ehU-MT-VM3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Ec-fW-Vfx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t53-bb-O01"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSW-KZ-WYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="-665.21739130434787"/>
+        </scene>
+    </scenes>
+</document>
